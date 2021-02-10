@@ -4,12 +4,13 @@
 }
 
 body {
-  margin-left: 40px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .res-container {
+  width: 30%;
   margin: 10px;
-  width: 31%;
   display: inline-block;
 }
 
@@ -18,14 +19,26 @@ body {
   border: none;
 }
 
-.res-container .res-card .inline-show .res-image {
-  width: 100%;
-  height: 300px;
-  border-radius: 40px;
+.res-container .res-card:hover {
+  width: 105%;
+  border: none;
+  transition: ease-in-out 0.2s;
+  transform: scale(1.05);
 }
 
-.res-container .res-card .inline-show .res-name {
+.res-container .res-card .inline-show .res-image {
+  width: 100%;
+  height: 280px;
+  border-radius: 40px;
+  margin-bottom: 10px;
+}
+.res-container .res-card .inline-show .single-line .star {
+  padding-top: 0%;
+}
+.res-name {
   font-size: x-large;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
 }
 
 .res-container .res-card .inline-show .res-votes {
@@ -37,22 +50,21 @@ body {
 .res-container .res-card .inline-show .res.rating {
   font-size: small;
   display: inline;
-  font-display: auto;
 }
 
 .res-container .res-card .inline-show .res-votes,
 .res-container .res-card .inline-show .res.rating {
-  display: inline;
-  padding: -5px;
+  display: inline-block;
 }
 
 .res-container .res-card .res-cuisines {
   font-size: smaller;
+  margin-bottom: 0%;
 }
 
 .res-container .res-card .res-cost {
   font-size: smaller;
-  padding-top: -5px;
+  margin-top: 0%;
 }
 
 @media screen and (max-width: 600px) {
