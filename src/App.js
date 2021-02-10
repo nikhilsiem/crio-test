@@ -7,11 +7,30 @@ import './App.css'
 function App() {
 
 	const [restaurant, setRest] = useState([]);
+	const [ratingFilter, setRatingFilter ]= useState("");
+	const [nameFilter, setNameFilter ]= useState("");
+	const [costFilter, setCostFilter ]= useState("");
   
 	
 	useEffect(() => {
 		getRestaurants();
 	});
+	
+	useEffect(()=> {
+		let filteredRestaurants = setRest;
+
+		if(ratingFilter !== "" ){
+			filteredRestaurants = filteredRestaurants.filter(val => val.restaurant.rating.sort(function(a, b){return b-a}))
+		}
+		if(nameFilter !== "" ){
+			filteredRestaurants = filteredRestaurants.filter(val => val.restaurant.name === nameFilter)
+		}
+		if(costFilter !== "" ){
+			filteredRestaurants = filteredRestaurants.filter(val => (val.restaurant.cost/2).sort(function(a, b){return a-b}) )
+		}
+
+		setRest(filteredRestaurants)
+	},[ratingFilter, nameFilter, costFilter ])
 	
 	const getRestaurants = async () => {
 			const response = await fetch(
@@ -27,17 +46,33 @@ function App() {
 			const data = await response.json();
 			setRest(data.nearby_restaurants);
 		}
+
+		
+	const handleFilterChanges = (e,filterType) => {
+		switch (filterType) {
+			case 'rating':
+				setRatingFilter(e.target.value)
+				break;
+			case 'cost':
+				setCostFilter(e.target.value)
+				break;
+			case 'name':
+				setNameFilter(e.target.value)
+				break;
+			default: break;
+		}
+	}
     
 	return (
 	    <div className="Zomato">
         <div className="buttons-align">
           <Row>
-            <button class="btn btn-small">Filter</button>
+            <button class="btn btn-small" >{/* onChange={(e) => {handleFilterChanges(e, 'name')}} */}Filter</button>
             <button class="btn btn-small">Rating: 4.0+</button> 
             <button class="btn btn-small">Safe and Hygienic</button> 
             <button class="btn btn-small">Delivery Time</button>
-            <button class="btn btn-small">Rating</button> 
-            <button class="btn btn-small">Cost</button>            
+            <button class="btn btn-small" onClick={(e) => {handleFilterChanges(e, 'rating')}}> {/* onClick={(e) => {handleFilterChanges(e, 'rating')}} */}Rating</button> 
+            <button class="btn btn-small" onClick={(e) => {handleFilterChanges(e, 'cost')}}>{/* onClick={(e) => {handleFilterChanges(e, 'cost')}} */}Cost</button>            
           </Row>
         </div>
 	  		<h2>Restaurants near you:</h2>

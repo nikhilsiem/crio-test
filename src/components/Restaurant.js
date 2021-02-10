@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Col, Row , Container, Image} from 'react-bootstrap'
 import ReactStars from "react-rating-stars-component";
+import StarComponent from './StarComponent'
 
 import './style.css'
 
@@ -21,21 +22,11 @@ const Restaurant = ({key, name, thumb, cuisines, cost , rating, votes }) => {
                         <Card.Text className="res-name">{name}</Card.Text>
                        
                             <div className="row">
-                                <div className="col-sm-3">
-                                <ReactStars
-                                    count={rating}
-                                    onChange={ratingChanged}
-                                    size={18}
-                                    activeColor="#E74C3C"
-                                    className="star"
-                                />
+                                <div className="col-sm">
+                                    <StarComponent value={rating} text={`${rating} (${votes}) delievery reviews`}/>
+                                
                                 </div>
-                                <div className="col-sm-2">
-                                <Card.Text className="res-rating">{rating}</Card.Text>
-                                </div>
-                                <div className="col-sm-5">
-                                <Card.Text className="res-votes" >({votes}) delivery reviews</Card.Text>
-                                </div>
+                                
                             </div>
                       
                         <Card.Text className="res-cuisines" >{cuisines}</Card.Text>
