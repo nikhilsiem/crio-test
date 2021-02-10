@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/crio-test/static/css/main.653f3f65.chunk.css",
-    "main.js": "/crio-test/static/js/main.13dd90db.chunk.js",
-    "main.js.map": "/crio-test/static/js/main.13dd90db.chunk.js.map",
+    "main.css": "/crio-test/static/css/main.bf4d1b15.chunk.css",
+    "main.js": "/crio-test/static/js/main.b1a00ab5.chunk.js",
+    "main.js.map": "/crio-test/static/js/main.b1a00ab5.chunk.js.map",
     "runtime-main.js": "/crio-test/static/js/runtime-main.f8b0605b.js",
     "runtime-main.js.map": "/crio-test/static/js/runtime-main.f8b0605b.js.map",
-    "static/js/2.b847d15d.chunk.js": "/crio-test/static/js/2.b847d15d.chunk.js",
-    "static/js/2.b847d15d.chunk.js.map": "/crio-test/static/js/2.b847d15d.chunk.js.map",
+    "static/js/2.6d34f43a.chunk.js": "/crio-test/static/js/2.6d34f43a.chunk.js",
+    "static/js/2.6d34f43a.chunk.js.map": "/crio-test/static/js/2.6d34f43a.chunk.js.map",
     "static/js/3.c03ae76d.chunk.js": "/crio-test/static/js/3.c03ae76d.chunk.js",
     "static/js/3.c03ae76d.chunk.js.map": "/crio-test/static/js/3.c03ae76d.chunk.js.map",
     "index.html": "/crio-test/index.html",
-    "static/css/main.653f3f65.chunk.css.map": "/crio-test/static/css/main.653f3f65.chunk.css.map",
-    "static/js/2.b847d15d.chunk.js.LICENSE.txt": "/crio-test/static/js/2.b847d15d.chunk.js.LICENSE.txt"
+    "static/css/main.bf4d1b15.chunk.css.map": "/crio-test/static/css/main.bf4d1b15.chunk.css.map",
+    "static/js/2.6d34f43a.chunk.js.LICENSE.txt": "/crio-test/static/js/2.6d34f43a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f8b0605b.js",
-    "static/js/2.b847d15d.chunk.js",
-    "static/css/main.653f3f65.chunk.css",
-    "static/js/main.13dd90db.chunk.js"
+    "static/js/2.6d34f43a.chunk.js",
+    "static/css/main.bf4d1b15.chunk.css",
+    "static/js/main.b1a00ab5.chunk.js"
   ]
 }
