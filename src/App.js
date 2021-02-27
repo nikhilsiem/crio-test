@@ -32,7 +32,7 @@ function App() {
 		setRest(filteredRestaurants)
 	},[ratingFilter, nameFilter, costFilter ])
 	
-	const getRestaurants = async () => {
+	const getRestaurants = React.useCallback(async () => {
 			const response = await fetch(
 				`https://developers.zomato.com/api/v2.1/geocode?lat=12.9039&lon=77.6013`, 
 				{
@@ -46,6 +46,7 @@ function App() {
 			const data = await response.json();
 			setRest(data.nearby_restaurants);
 		}
+	,[])
 
 		
 	const handleFilterChanges = (e,filterType) => {
