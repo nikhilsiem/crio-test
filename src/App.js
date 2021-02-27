@@ -14,7 +14,7 @@ function App() {
 	
 	useEffect(() => {
 		getRestaurants();
-	});
+	},[]);
 	
 	useEffect(()=> {
 		let filteredRestaurants = setRest;
